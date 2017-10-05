@@ -8,14 +8,14 @@ function isBalanced(node) {
 	if(node == NULL)
     return true; 
 	
-	lh = height(node->left);
-	rh = height(node->right);
+	lh = height(node.left);
+	rh = height(node.right);
 
 	var heightDiff = lh - rh;
 	if(heightDiff > 1 || heightDiff < -1) {
 		return false;
 	} else {
-		return isBalanced(node->left) && isBalanced(node->right)
+		return isBalanced(node.left) && isBalanced(node.right)
 	}
    
 }
